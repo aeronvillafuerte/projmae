@@ -56,6 +56,7 @@ public class dashBoardPages extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel1.setAutoscrolls(true);
         jPanel1.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
@@ -104,6 +105,9 @@ public class dashBoardPages extends javax.swing.JInternalFrame {
         manageUser.setBackground(new java.awt.Color(0, 204, 204));
         manageUser.setPreferredSize(new java.awt.Dimension(160, 160));
         manageUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manageUserMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 manageUserMouseEntered(evt);
             }
@@ -114,6 +118,11 @@ public class dashBoardPages extends javax.swing.JInternalFrame {
         manageUser.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsfolder/icons8-admin-settings-male-100.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         manageUser.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 90));
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
@@ -175,6 +184,17 @@ public class dashBoardPages extends javax.swing.JInternalFrame {
     private void reportsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reportsMouseExited
         reports.setBackground(headcolor);
     }//GEN-LAST:event_reportsMouseExited
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        loginForm lf = new loginForm();
+        lf.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void manageUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageUserMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageUserMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
